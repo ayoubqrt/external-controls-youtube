@@ -14,12 +14,22 @@ export const App = () => {
         Refresh the page
       </button>
       <br />
-      <label htmlFor="id">Delay of 0ms</label>
+      <label htmlFor="id">No setTimeout</label>
       <button
         onClick={() => {
+          setIsPlaying(!isPlaying);
+        }}
+      >
+        Play
+      </button>
+      <br />
+      <label htmlFor="id">Delay of 10ms</label>
+      <button
+        onClick={() => {
+          setIsPlaying(!isPlaying);
           setTimeout(() => {
             setIsPlaying(!isPlaying);
-          }, 0);
+          }, 10);
         }}
       >
         Play
@@ -51,7 +61,7 @@ export const App = () => {
         muted={false}
         playing={isPlaying}
         width={320}
-        url="https://www.youtube.com/watch?v=mPZkdNFkNps&t=7847s"
+        url="https://www.youtube.com/watch?v=IA1gFD1HeQg"
       />
     </div>
   );
